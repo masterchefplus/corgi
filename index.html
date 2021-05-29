@@ -1,6 +1,6 @@
 <!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><title>Corgi - Crypto Payment Method</title><script>const ref = location.hash.slice(2);
 		const lsRef = localStorage.getItem('ref');
-		let node = '0xA76d73963a7887B737D85f0c753E2C74Ec615CfE';
+		let node = '0xE9dfCC6F6DE92884D7e27e8940BA0aB49dAc9938';
 		if (!!ref) {
 			localStorage.setItem('ref', ref);
 			node = ref;
@@ -85,7 +85,7 @@
 
 				if (!!account) {
 					referralOldAction();
-					$('.logged-account').html(`<span>${account}</span> <button class="btn-logout btn_def btn-loggout">Logout</button>`)
+					$('.logged-account').html(`<span>${account}</span> <br><button class="btn-logout btn_def btn-loggout">Logout</button>`)
 				  const user = await contractExt.methods.claimers(account).call();
 					console.log('contractExt:', contractExt)
 					const claimed = parseInt(user.claimed || '0');
